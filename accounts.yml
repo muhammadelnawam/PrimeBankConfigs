@@ -3,7 +3,6 @@ spring:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/accounts-db
     username: admin
-    password:
     initialization-mode: always
     driver-class-name: org.postgresql.Driver
   jpa:
