@@ -2,7 +2,6 @@ spring:
   datasource:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/accounts-db
-    username: admin
     initialization-mode: always
     driver-class-name: org.postgresql.Driver
   jpa:
