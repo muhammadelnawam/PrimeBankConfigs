@@ -1,13 +1,13 @@
 spring:
   datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/accounts-db
+    platform: sqlserver
+    url: jdbc:sqlserver://localhost:1433;databaseName=accounts-db;trustServerCertificate=true
     initialization-mode: always
-    driver-class-name: org.postgresql.Driver
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
     hibernate:
       ddl-auto: update
 server:
