@@ -1,13 +1,21 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/accounts-db
+    platform: postgres
     driver-class-name: org.postgresql.Driver
-  jpa:
-    properties:
+    url: jdbc:postgresql://localhost:5432/accounts-db
+    initialization-mode: always
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: false
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
+        ddl-auto: create
+  jackson:
+    deserialization:
+      FAIL_ON_IGNORED_PROPERTIES: false
+    serialization:
+      INDENT_OUTPUT: false
+      WRITE_DATES_AS_TIMESTAMPS: false
+      WRITE_BIGDECIMAL_AS_PLAIN: true
 
 server:
   port: 8088
