@@ -2,8 +2,8 @@ spring:
   datasource:
     platform: sqlserver
     url: jdbc:sqlserver://localhost:1433;databaseName=accounts-db;trustServerCertificate=true
-    username: ${accounts-db-username}
-    password: ${accounts-db-password}
+    username: ${db-username}
+    password: ${db-password}
     initialization-mode: always
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
