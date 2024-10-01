@@ -18,6 +18,8 @@ server:
     context-path: /accounts
 
 eureka:
+  instance:
+    preferIpAddress: true # Register with IP address in Local environment as DNS is not available for local environment
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
