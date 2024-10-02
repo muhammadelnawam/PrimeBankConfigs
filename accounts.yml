@@ -21,15 +21,10 @@ eureka:
   instance:
     preferIpAddress: true # Register with IP address in Local environment as DNS is not available for local environment
   client:
+    fetchRegistry: true
+    registerWithEureka: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-
-
-info:
-  app:
-    name: "accounts"
-    description: "Mini Bank Accounts Application"
-    version: "1.0.0"
 
 
 management:
@@ -48,3 +43,9 @@ endpoints:
   shutdown:
     enabled: true
 
+
+info:
+  app:
+    name: "accounts"
+    description: "Prime Bank Accounts Application"
+    version: "1.0.0"
