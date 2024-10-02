@@ -45,6 +45,6 @@ management:
     shutdown:
       enabled: true
 
-  info:
-    env:
-      enabled: true
+    info:
+      env:
+        enabled: true
