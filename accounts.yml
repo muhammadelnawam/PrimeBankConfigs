@@ -31,19 +31,20 @@ info:
     description: "Mini Bank Accounts Application"
     version: "1.0.0"
 
-endpoint:
-  shutdown:
-    enabled: true
-
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-    info:
-      enabled: true
   endpoint:
     shutdown:
       enabled: true
+  info:
+    env:
+      enabled: true
+
+endpoints:
+  shutdown:
+    enabled: true
 
