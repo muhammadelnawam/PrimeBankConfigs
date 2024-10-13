@@ -1,7 +1,7 @@
 spring:
   datasource:
     platform: sqlserver
-    url: jdbc:sqlserver://localhost:1433;databaseName=accounts-db;trustServerCertificate=true
+    url: jdbc:sqlserver://localhost:1433;databaseName=core-banking-db;trustServerCertificate=true
     username: ${db-username}
     password: ${db-password}
     initialization-mode: always
@@ -13,7 +13,7 @@ spring:
     hibernate:
       ddl-auto: update
 server:
-  port: 8088
+  port: 8089
   servlet:
     context-path: /
 
@@ -52,6 +52,6 @@ endpoints:
 
 info:
   app:
-    name: "accounts"
-    description: "Prime Bank Accounts Application"
+    name: "core-banking"
+    description: "Prime Bank Core Banking Application"
     version: "1.0.0"
