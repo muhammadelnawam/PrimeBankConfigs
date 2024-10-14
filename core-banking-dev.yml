@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    platform: sqlserver
+    url: jdbc:postgresql://localhost:5432/core-banking-db
+    username: ${db-username}
+    password: ${db-password}
+    initialization-mode: always
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8089
+  servlet:
+    context-path: /
+
+eureka:
+  instance:
+    preferIpAddress: true # Register with IP address in Local environment as DNS is not available for local environment
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    prometheus:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+endpoints:
+  shutdown:
+    enabled: true
+
+
+info:
+  app:
+    name: "core-banking"
+    description: "Prime Bank Core Banking Application"
+    version: "1.0.0"
