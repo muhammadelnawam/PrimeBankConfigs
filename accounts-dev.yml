@@ -1,7 +1,7 @@
 spring:
   datasource:
     platform: sqlserver
-    url: jdbc:sqlserver://localhost;databaseName=accounts-db;trustServerCertificate=true
+    url: jdbc:sqlserver://localhost,1433;databaseName=accounts-db;trustServerCertificate=true
     username: ${db-username}
     password: ${db-password}
     initialization-mode: always
